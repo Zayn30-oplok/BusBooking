@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="518.0" prefWidth="1005.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ClientPageController">
+   <children>
+      <ImageView fitHeight="555.0" fitWidth="1010.0" layoutY="-36.0">
+         <image>
+            <Image url="@ClientPageBus.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="565.0" fitWidth="1007.0" layoutY="-47.0">
+         <image>
+            <Image url="@ClientPageBus.jpeg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="33.0" prefWidth="1010.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="944.0" layoutY="4.0" mnemonicParsing="false" onAction="#logOutButton" style="-fx-background-color: red;" text="Log-out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="27.0" layoutX="131.0" layoutY="221.0" strokeType="INSIDE" width="120.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <RadioButton fx:id="oneWay" layoutX="150.0" layoutY="226.0" mnemonicParsing="false" text="One Way">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="27.0" layoutX="261.0" layoutY="221.0" strokeType="INSIDE" width="120.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <RadioButton fx:id="roundTrip" layoutX="280.0" layoutY="226.0" mnemonicParsing="false" text="Round Trip">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <ChoiceBox fx:id="departureChoice" layoutX="132.0" layoutY="300.0" prefHeight="33.0" prefWidth="182.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </ChoiceBox>
+      <ChoiceBox fx:id="destinationChoice" layoutX="323.0" layoutY="301.0" prefHeight="33.0" prefWidth="182.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </ChoiceBox>
+      <DatePicker fx:id="departureDate" layoutX="515.0" layoutY="300.0" prefHeight="33.0" prefWidth="122.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </DatePicker>
+      <TextField fx:id="oneWayField" alignment="CENTER" editable="false" layoutX="651.0" layoutY="300.0" prefHeight="33.0" prefWidth="120.0" text="One Way">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="returnDate" layoutX="651.0" layoutY="300.0" prefHeight="33.0" prefWidth="120.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </DatePicker>
+      <Spinner fx:id="passengerCount" layoutX="785.0" layoutY="300.0" prefHeight="33.0" prefWidth="120.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Spinner>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="131.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="321.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="521.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure Date" wrappingWidth="122.047119140625">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="returnLabel" fill="WHITE" fontSmoothingType="LCD" layoutX="656.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date" wrappingWidth="122.047119140625">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="785.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passenger Count" wrappingWidth="122.047119140625">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Button layoutX="459.0" layoutY="361.0" mnemonicParsing="false" onAction="#findButtonClick" style="-fx-background-color: #0040ff;" text="Find Tickets" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.250980406999588" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
